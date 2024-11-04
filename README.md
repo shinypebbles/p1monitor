@@ -1,5 +1,21 @@
 # p1monitor
 Get data from p1monitor into Oracle
+Create a table for the data per year.
+```
+  CREATE TABLE "P1_YEAR" 
+   (	"TIMESTAMP_LOCAL" DATE, 
+	"TIMESTAMP_UTC" NUMBER, 
+	"CONSUMPTION_KWH_LOW" NUMBER, 
+	"CONSUMPTION_KWH_HIGH" NUMBER, 
+	"PRODUCTION_KWH_LOW" NUMBER, 
+	"PRODUCTION_KWH_HIGH" NUMBER, 
+	"CONSUMPTION_DELTA_KWH" NUMBER, 
+	"PRODUCTION_DELTA_KWH" NUMBER, 
+	"CONSUMPTION_GAS_M3" NUMBER, 
+	"CONSUMPTION_GAS_DELTA_M3" NUMBER
+   ) ;
+```
+This procedure performs an API call to p1monitor and inserts the data in the Oracle table.
 ```
 create or replace PROCEDURE getp1monitor AS
   req   UTL_HTTP.REQ;
