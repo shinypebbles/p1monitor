@@ -1,5 +1,5 @@
 # p1monitor
-Get data from p1monitor into Oracle
+Get data from p1monitor into Oracle.\
 Create a table for the data per year.
 ```
   CREATE TABLE "P1_YEAR" 
